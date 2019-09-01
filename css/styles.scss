@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+$colors: (
+  primary: #1c9963
+);
+$paddings: 5px 10px;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  padding: 0 20px;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .nav a {
+    color: map-get($map: $colors, $key: primary);
+    border: 1px solid map-get($map: $colors, $key: primary);
+    padding: $paddings;
+    border-radius: 6px;
+  }
+}
+
+.hero {
+  &__image {
+    width: 100%;
+    height: 150px;
+    padding: 20px 25px;
+    background-image: url('https://images.unsplash.com/photo-1457419655743-2e0acc6b5122?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+
+  &__title {
+    font-size: 28px;
+    margin: 10px 0;
+  }
+
+  &__sub-title {
+    line-height: 1.2;
+  }
+
+  &__social {
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+    padding: $paddings;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2px solid rgba(0, 0, 0, 0.84);
+
+    .hero__follow {
+      color: map-get($map: $colors, $key: primary);
+      border: 1px solid map-get($map: $colors, $key: primary);
+      padding: $paddings;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+  }
+}
+
+.blog-posts {
+  width: 100%;
+  height: 350px;
+
+  .blog-post {
+    margin: 20px 0;
+    height: 100%;
+    padding: $paddings;
+    background-image: url('https://images.unsplash.com/photo-1540487240765-d6da97fefbfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60');
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+      color: #fff;
+    }
+  }
+}
