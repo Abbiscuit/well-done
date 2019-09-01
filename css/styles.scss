@@ -16,6 +16,7 @@ $colors: (
   primary: #1c9963
 );
 $paddings: 5px 10px;
+$textShadow: 0 0 30px rgba(0, 0, 0, 0.8);
 
 .header {
   display: flex;
@@ -56,11 +57,21 @@ $paddings: 5px 10px;
     background-size: cover;
     background-position: center;
     color: #fff;
+
+    @media (min-width: 768px) {
+      height: 300px;
+    }
   }
 
   &__title {
     font-size: 28px;
     margin: 10px 0;
+
+    @media (min-width: 768px) {
+      font-size: 36px;
+      margin-top: 40px;
+      text-shadow: $textShadow;
+    }
   }
 
   &__sub-title {
@@ -92,16 +103,27 @@ $paddings: 5px 10px;
   width: 100%;
   height: 350px;
 
+  @media (min-width: 992px) {
+    display: flex;
+    align-items: center;
+  }
+
   .blog-post {
     margin: 20px 0;
     height: 100%;
-    padding: $paddings;
+    padding: 20px 25px;
     background-image: url('https://images.unsplash.com/photo-1540487240765-d6da97fefbfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60');
     background-size: cover;
     background-position: center;
 
+    @media (min-width: 992px) {
+      margin: 10px 5px;
+    }
+
     &__title {
       color: #fff;
+      margin-top: 40px;
+      text-shadow: $textShadow;
     }
   }
 }
